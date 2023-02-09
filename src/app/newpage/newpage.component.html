@@ -1,0 +1,101 @@
+<!--
+  This example requires updating your template:
+
+  ```
+  <html class="h-full bg-gray-100">
+  <body class="h-full">
+  ```
+-->
+<div class="min-h-full">
+
+  <header class="bg-white shadow">
+    <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900">Angular Task 1</h1>
+    </div>
+  </header>
+  <main>
+    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+      <!-- Replace with your content -->
+      <div class="px-4 py-6 sm:px-0">
+        <div class="overflow-hidden bg-white shadow sm:rounded-lg">
+  <div class="px-4 py-5 sm:px-6 bg-gray-900 text-white px-3">
+    <h3 class="text-lg font-medium leading-6 text-white px-3">Pengerjaan Angular Task 1</h3>
+    <p class="mt-1 max-w-2xl text-sm text-white px-3">Mempelajari Mengenai Konsep Interpolation</p>
+  </div>
+  <div class="border-t border-gray-200">
+    <dl>
+      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500">Nama Lengkap</dt>
+        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ greetUser() }}</dd>
+      </div>
+      <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500">Jumlah Huruf Pada Nama</dt>
+        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ nama.length }}</dd>
+      </div>
+      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500">Mencoba UpperCase</dt>
+        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ title.toUpperCase() }}</dd>
+      </div>
+      <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500">Mencoba LowerCase</dt>
+        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ title.toLowerCase() }}</dd>
+      </div>
+      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500">Mencoba Site URL</dt>
+        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ siteUrl }}</dd>
+      </div>
+      <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500">Mencoba Arithmetic</dt>
+        <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">{{ 4 + 4 + 4 + 2 }}</dd>
+      </div>
+    </dl>
+  </div><br><br>
+
+  <div class="px-4 py-5 sm:px-6 bg-gray-900 text-white px-3">
+    <h3 class="text-lg font-medium leading-6 text-white px-3">Pengerjaan Angular Task 1</h3>
+    <p class="mt-1 max-w-2xl text-sm text-white px-3">Mempelajari Mengenai Konsep Binding</p>
+  </div>
+  <div class="border-t border-gray-200">
+    <dl>
+      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500">Enable Input</dt>
+            <input [id]="myId" type="text" value="test1" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"><br>
+
+      </div>
+      <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500">Disable Input</dt>
+            <input disabled="{{ false }}" id="{{ myId }}" type="text" value="test1" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+      </div>
+      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500">Event Binding</dt>
+        <button (click)="onClick()"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+        Coba Klik
+        </button>
+        {{ greeting }}
+      </div>
+      <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500">Two Way Binding</dt>
+    <input type="text" [(ngModel)]="tittle" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+{{tittle}}
+      </div>
+    </dl>
+  </div>
+</div>
+      </div>
+    </div>
+  </main>
+</div>
+
+      <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+        <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
+          <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+          <defs>
+            <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#9089FC"></stop>
+              <stop offset="1" stop-color="#FF80B5"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
